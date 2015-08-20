@@ -1,0 +1,26 @@
+// Operaciones.cpp : Defines the entry point for the console application.
+// Fecha: 20/08/2015
+// Autor: Paula Gumucio Arias
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+void main ()
+{
+	int A, B, C, D, E, F;
+    cout <<"Ingrese el primer valor: ";
+    cin >>A;
+	cout <<"Ingrese el segundo valor: ";
+	cin >>B;
+	C=A+B;
+	D=A-B;
+	E=A*B;
+	F=A/B;
+	cout <<"El resultado de la suma es: " <<C<<endl;
+	cout <<"El resultado de la resta es: " <<D<<endl;
+	cout <<"El resultado de la multiplicacion es: " <<E<<endl;
+	cout <<"El resultado de la division es: " <<F<<endl;
+	getch();
+}
