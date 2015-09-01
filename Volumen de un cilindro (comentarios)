@@ -1,0 +1,27 @@
+// Programa con comentarios.cpp : Defines the entry point for the console application.
+//Autor: Paula Gumucio Arias y Christian Chahin Vargas
+//Fecha: 01/09/15
+//Objetivo: Calcular el volumen de un cilindro
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+void main ()
+ //Se declaran las variables
+ {float PI, R, H, V;
+ //Se declara el valor de PI
+  PI=3.141516;
+ //Se inicia el proceso de entrada
+  cout<<"Ingrese el radio: ";
+  cin>>R;
+  cout<<"Ingrese la altura: ";
+  cin>>H;
+ //Se realiza la operacion para calcular el volumen
+  V=PI*R*R*H;
+ //Se inicia el proceso de salida
+  cout<<"El volumen del cilindro es: "<<V;
+ getch();
+ }
