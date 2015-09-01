@@ -7,18 +7,22 @@
 using namespace std;
 int main()
   //Se declaran las variables
-{   int a, b, c, d, e, g;
+  {int a, b, c, d, e, g;
     float f;
   //Se inicia el roceso de entrada
 	cout <<"ingrese el primer numero"<< endl;
     cin >> a;
     cout <<"ingrese el segundo numer"<< endl;
     cin >> b;
-  //Se indican las operaciones que se van a realizar
+  //Se realiza el proceso de suma
      c = a+b;
+ //Se realiza el proceso de resta
      d = a-b;
+ //Se realiza el proceso de multiplicacion
      e = a*b;
+ //Se realiza el proceso de division
      f = a/b;
+ //Se realiza la operacion para mostrar el residuo
      g = a%b;
   //Se inicia el proceso de salida
     cout <<"la suma; " << c << endl;
