@@ -1,0 +1,28 @@
+// Nota final.cpp : Defines the entry point for the console application.
+//Autor: Paula Gumucio Arias
+//Fecha: 08/09/2015
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+
+void main()
+{
+float a,b,c,d,e,f,n;
+cout<<"Ingrese la nota del rpimer parcial: ";
+cin>> a;
+cout<<"Ingrese la nota del segundo parcial: ";
+cin>> b;
+cout<<"Ingrese la nota del tercer parcial: ";
+cin>> c;
+cout<<"Ingrese la nota del examen final: ";
+cin>> d;
+cout<<"Ingrese la nota de los proyectos: ";
+cin>> e;
+cout<<"Ingrese la nota de los practicos: ";
+cin>> f;
+n=(a+b+c+d+e+f);
+cout<<"La nota final es de: "<<n<<endl;
+getch();
+}
