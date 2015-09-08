@@ -1,0 +1,19 @@
+// Ciudadano.cpp : Defines the entry point for the console application.
+//Autor: Paula Gumucio Arias
+//Fecha: 08/09/2015
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+
+void main()
+{int A;
+  cout<<"Introduzca su edad: ";
+  cin>>A;
+ if (A>=18)
+	cout<<"Usted puede votar";
+ else 
+	cout<<"Usted no puede votar";
+getch ();
+}
