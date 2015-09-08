@@ -12,8 +12,8 @@ void main()
   cout<<"Introduzca su edad: ";
   cin>>A;
  if (A>=18)
-	cout<<"Usted puede votar";
+    cout<<"Usted puede votar";
  else 
-	cout<<"Usted no puede votar";
+    cout<<"Usted no puede votar";
 getch ();
 }
