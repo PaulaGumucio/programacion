@@ -1,0 +1,29 @@
+//Numero mayor.cpp : Defines the entry point for the console application.
+//Autor: Paula Gumucio Arias
+//Fecha: 10/09/2015
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+void main ()
+{float A, B, C;
+ cout<<"Ingrese el valor de A: ";
+ cin>>A;
+ cout<<"Ingrese el valor de B: ";
+ cin>>B;
+ cout<<"Ingrese el valor de C: ";
+ cin>>C;
+ if (A>B)
+	 if (A>C)
+		 cout<<"El mayor es: "<<A;
+	 else
+		 cout<<"El mayor es: "<<C;
+ else 
+	 if (B>C)
+		 cout<<"El mayor es: "<<B;
+	 else 
+		 cout<<"El mayor es: "<<C;
+ getch();
+}
