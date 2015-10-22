@@ -1,0 +1,67 @@
+//Ecuacion cuadratica.cpp : Defines the entry point for the console application.
+//Autor: Paula Gumucio Arias
+//Fecha: 22/10/15
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+using namespace std;
+float discriminante (float a, float b, float c);
+void imaginarios (float a, float b, float d, float &x1, float &x2);
+void reales (float a, float b, float d, float &x1, float &x2);
+float unica (float a, float b);
+void main ()
+{float a,b,c,d,b1,b2,x;
+ cout<<"Ingrese el valor de A: "<<endl;
+ cin>>a;
+ while (a!=0)
+ {cout<<"Ingrese el valor de B: "<<endl;
+  cin>>b;
+  cout<<"Ingrese el valor de C: "<<endl;
+  cin>>c;
+  d=discriminante (a,b,c);
+  if (d>0)
+   {reales (a,b,d,b1,b2);
+    cout<<"La solucion 1 es: "<<b1<<endl;
+    cout<<"La solucion 2 es: "<<b2<<endl;
+   }
+  else
+   {if (d==0)
+     {x=unica (a,b);
+      cout<<"La solucion es: "<<x<<endl;
+     }
+    else
+     {imaginarios (a,b,d,b1,b2);
+      cout<<"La solucion es: "<<b1<<"+"<<b2<<"i"<<endl;
+	  cout<<"La solucion es: "<<b2<<"-"<<b1<<"i"<<endl;
+     }
+  cout<<"Ingrese el valor de A: "<<endl;
+  cin>>a;
+   }
+ }
+  getch ();
+ }
+
+float discriminante (float a, float b, float c)
+ {float aux;
+  aux=pow(b,2)-4*a*c;
+  return aux;
+ }
+
+void reales (float a, float b, float d, float &x1, float &x2)
+ {x1=(-b+sqrt(d))/(2*a);
+  x2=(-b-sqrt(d))/(2*a);
+ }
+
+float unica (float a, float b)
+ {float x;
+  x=-b/(2*a);
+  return x;
+ }
+
+void imaginarios (float a, float b, float d, float &x1, float &x2)
+ {x1=-b/(2*a);
+  x2=(sqrt(-d))/(2*a);
+ }
