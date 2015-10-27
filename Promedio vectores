@@ -16,9 +16,9 @@
  {int N;
   double a[MAX], prom;
   do
-  {cout<<"Ingrese el numero de elementos (valor maximo de 100): "<<endl;
+   {cout<<"Ingrese el numero de elementos (valor maximo de 100): "<<endl;
    cin>>N;
-  } 
+   } 
   while ((N<=0)||(N>100));
   cargar (a,N);
   prom=promedio (a,N);
@@ -30,7 +30,7 @@
  void cargar (double a[], int tamanio)
  {for (int i=0; i<tamanio; i++)
    {cout<<"a["<<i<<"]: ";
-   cin>>a[i];
+    cin>>a[i];
    }
  }
   double promedio (double a[], int tamanio)
