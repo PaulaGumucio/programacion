@@ -1,0 +1,29 @@
+// Segundo parcial.cpp : Defines the entry point for the console application.
+// Autor: Paula Gumucio Arias
+//Fecha: 10/11/15
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+
+void main ()
+{int S, i, N, ban=1;
+ S=0;
+ i=2;
+ cout<<"Ingrese el valor de N: "<<endl;
+ cin>>N;
+ while (i<=N)
+ {if (ban==0)
+   {S=S+i;
+    ban=1;
+   }
+ else
+   {S=S-i;
+    ban=0;
+   }
+ i++;
+ }
+ cout<<"El valor de la sumatoria es: "<<S<<endl;
+ getch();
+}
