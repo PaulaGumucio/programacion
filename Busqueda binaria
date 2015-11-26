@@ -1,0 +1,60 @@
+//Busqueda binaria : Defines the entry point for the console application.
+//Autores: Paula Gumucio, Christian Chahin, Herlan Catala
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+using namespace std;
+
+void mostrar (int a[], int N);
+int BusquedaBinaria (int a[], int N, int C);
+void ordenar (int a[], int N);
+void intercambiar (int &A, int &B);
+ void main ()
+ {int clave=0;
+  int tamanio=15;
+  int arreglo [tamanio]={25, 17, 13, 16, 41, 32, 12, 115, 95, 84, 54, 63, 78, 21, 10};
+  ordenar (arreglo, tamanio);
+  cout<<"Elementos del arreglo: "<<endl;
+  mostrar (arreglo, tamanio);
+  cout<<"Indique un valor a buscar para devolver indice: "<<endl;
+  cin>>clave;
+  cout<<"Su valor se encuentra en el arreglo ["<<BusquedaBinaria(arreglo, tamanio, clave)<<"]"<<endl;
+  cout<<"Fin del programa "<<endl;
+  getch();
+ }
+ //funciones
+ void mostrar(int arreglo [],int tamanio)
+ {for(int i=0;i<tamanio;i++)
+ cout<<"areglo["<<i<<"]="<<arreglo[i]<<endl;
+ }
+ int busquedabinaria(int arreglo[],int tamanio,int clave)
+ {int Iarriba=tamanio-1;
+  int Iabajo=0;
+  int Icentro;
+  while(Iabajo<=Iarriba)
+  {Icentro=(Iarriba+Iabajo)/2;
+  if(arreglo[Icentro]==clave)
+	  return Icentro;
+  else 
+	  if(clave<arreglo[Icentro]
+	  Iarriba=Icentro-1
+	  else 
+	  Iabajo=Icentro+1;
+  }
+
+  return-1;
+ }
+ void ordenar(int arreglo[], int tamanio)
+ {for(int i=0; i<tamanio-1; i++)
+ for(int j=0; j<tamanio-1; j++)
+	 if(arreglo[j]>arreglo[j+1])
+		 intercambiar (arreglo [j,arreglo[j+1]);
+ }
+ void intercambiar (int&a,int&b)
+ {int tmp-b;
+ b=a;
+ a=tmp;
+ }
