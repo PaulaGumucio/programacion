@@ -1,0 +1,264 @@
+// Proyecto final.cpp : Defines the entry point for the console application.
+//Autores: Paula Gumucio, Christian Chahin, Herlan Catala
+
+#include "stdafx.h" 
+#include <iostream> 
+#include "conio.h" 
+
+using namespace std; 
+
+void primermenu(int vec[]); 
+void HorarioCarlos(int vec[]); 
+void mostrarhorariosdisponibles(int vec[]); 
+void HorarioJorge(int vec[]); 
+void HorarioPablo (int vec[]); 
+void HorarioHugo (int vec[]); 
+void segundomenu (int vec[]); 
+void tercermenu (int vec[]); 
+void HorarioLucy (int vec[]); 
+void HorarioLucas (int vec[]); 
+ 
+void mostrarhorariosdisponibles(int vec[]) 
+{ 
+if (vec[1]==0) 
+    cout<<"7:00-8:00"<<endl; 
+if(vec[2]==0) 
+    cout<<"9:00-10:00"<<endl; 
+if(vec[3]==0) 
+    cout<<"10:00-12:00"<<endl; 
+} 
+
+void HorarioJorge(int vec[]) 
+{ 
+int opcion=0,i; 
+cout<<"--------------------"<<endl; 
+cout<<"HORARIOS DISPONIBLES"<<endl; 
+cout<<"--------------------"<<endl; 
+cout<<"\t\t"<<endl; 
+cout<<"1.-7:00-8:00"<<endl; 
+cout<<"2.-9:00-10:00"<<endl; 
+cout<<"3.-10:00-11:00"<<endl; 
+do 
+{ 
+ cin>>opcion; 
+} 
+
+while(vec[opcion]==1); 
+vec[opcion]=1; 
+cout<<"Ya reservo"<<endl; 
+} 
+
+// 
+
+void HorarioCarlos(int vec[]) 
+{ 
+int opcion=0,i; 
+cout<<"--------------------"<<endl; 
+cout<<"HORARIOS DISPONIBLES"<<endl; 
+cout<<"--------------------"<<endl; 
+cout<<"\t\t"<<endl; 
+cout<<"1.-7:30-8:30"<<endl; 
+cout<<"2.-9:30-10:30"<<endl; 
+cout<<"3.-10:30-11:30"<<endl; 
+do 
+{
+cin>>opcion; 
+} 
+while(vec[opcion]==1); 
+vec[opcion]=1; 
+cout<<"Ya reservo"<<endl; 
+} 
+
+// 
+
+void primermenu(int vec[]) 
+{
+int opcion; 
+cout<<"--------------------"<<endl; 
+cout<<"PELUQUERIA DESTAQUES"<<endl; 
+cout<<"--------------------\t\t"<<endl; 
+cout<<"\t\t"<<endl; 
+cout<<"Direccion: Av. Monseñor Rivero"<<endl; 
+cout<<"Precio: 60bs "<<endl; 
+cout<<"\t\t"<<endl; 
+cout<<"Elija el peluquero"<<endl; 
+cout<<"1.-Jorge"<<endl; 
+cout<<"2.-Carlos"<<endl; 
+cin>>opcion; 
+switch(opcion) 
+{ 
+case 1 : HorarioJorge(vec); 
+    break; 
+case 2 : HorarioCarlos(vec); 
+    break;
+}
+} 
+
+// 
+
+void segundomenu(int vec[]) 
+{ 
+int opcion; 
+cout<<"--------------"<<endl; 
+cout<<"PELUQUERIA H2O"<<endl; 
+cout<<"--------------\t\t"<<endl; 
+cout<<"\t\t"<<endl; 
+cout<<"Direccion: Cine Center, 1er anillo"<<endl; 
+cout<<"Precio: 80bs "<<endl; 
+cout<<"\t\t"<<endl; 
+cout<<"Elija el peluquero"<<endl; 
+cout<<"1.-Pablo"<<endl; 
+cout<<"2.-Hugo"<<endl; 
+cin>>opcion; 
+switch(opcion) 
+{ 
+case 1 : HorarioPablo(vec); 
+    break; 
+case 2 : HorarioHugo(vec); 
+    break;
+}
+} 
+
+// 
+
+void HorarioPablo(int vec[]) 
+{
+int opcion=0,i; 
+cout<<"--------------------"<<endl; 
+cout<<"HORARIOS DISPONIBLES"<<endl; 
+cout<<"--------------------"<<endl; 
+cout<<"\t\t"<<endl; 
+cout<<"1.-7:00-8:00"<<endl; 
+cout<<"2.-9:00-10:00"<<endl; 
+cout<<"3.-10:00-11:00"<<endl; 
+do 
+{
+cin>>opcion; 
+} 
+while(vec[opcion]==1); 
+vec[opcion]=1; 
+cout<<"Ya reservo"<<endl; 
+} 
+
+// 
+
+void HorarioHugo(int vec[]) 
+{
+int opcion=0,i; 
+cout<<"--------------------"<<endl; 
+cout<<"HORARIOS DISPONIBLES"<<endl; 
+cout<<"--------------------"<<endl; 
+cout<<"\t\t"<<endl; 
+cout<<"1.-7:30-8:30"<<endl; 
+cout<<"2.-9:30-10:30"<<endl; 
+cout<<"3.-10:30-11:30"<<endl; 
+do 
+{ 
+cin>>opcion; 
+} 
+while(vec[opcion]==1); 
+vec[opcion]=1; 
+cout<<"Ya reservo"<<endl; 
+} 
+
+// 
+
+void tercermenu(int vec[])
+{ 
+int opcion; 
+cout<<"-------------------"<<endl; 
+cout<<"PELUQUERIA KIDSCUT"<<endl; 
+cout<<"------------------\t\t"<<endl; 
+cout<<"\t\t"<<endl; 
+cout<<"Direccion: Av. Monseñor Rivero, al lado de 'El Arriero'"<<endl; 
+cout<<"Precio: 50bs "<<endl; 
+cout<<"\t\t"<<endl; 
+cout<<"Elija el peluquero"<<endl; 
+cout<<"1.-Lucy"<<endl; 
+cout<<"2.-Lucas"<<endl; 
+cin>>opcion; 
+switch(opcion) 
+{ 
+case 1 : HorarioLucy(vec); 
+    break; 
+case 2 : HorarioLucas(vec); 
+    break; 
+} 
+} 
+
+// 
+
+void HorarioLucy(int vec[]) 
+{ 
+int opcion=0,i; 
+cout<<"--------------------"<<endl; 
+cout<<"HORARIOS DISPONIBLES"<<endl; 
+cout<<"--------------------"<<endl; 
+cout<<"\t\t"<<endl; 
+cout<<"1.-7:00-8:00"<<endl; 
+cout<<"2.-9:00-10:00"<<endl; 
+cout<<"3.-10:00-11:00"<<endl; 
+do 
+{ 
+cin>>opcion; 
+} 
+while(vec[opcion]==1); 
+vec[opcion]=1; 
+cout<<"Ya reservo"<<endl; 
+} 
+
+// 
+
+void HorarioLucas(int vec[]) 
+{ 
+int opcion=0,i; 
+cout<<"--------------------"<<endl; 
+cout<<"HORARIOS DISPONIBLES"<<endl; 
+cout<<"--------------------"<<endl; 
+cout<<"\t\t"<<endl; 
+cout<<"1.-7:30-8:30"<<endl; 
+cout<<"2.-9:30-10:30"<<endl; 
+cout<<"3.-10:30-11:30"<<endl; 
+do 
+{ 
+cin>>opcion; 
+} 
+while(vec[opcion]==1); 
+vec[opcion]=1; 
+cout<<"Ya reservo"<<endl; 
+} 
+
+// 
+
+void main () 
+{
+int opcion,i; 
+int vec[20]; 
+for(i=0;i<21;i++) 
+    vec[i]=0;
+do{ 
+cout<<"\t\t ****MENU**** \n\n"<<endl; 
+cout<<"-------------------------------"<<endl; 
+cout<<" Elija la peluqueria que desea: "<<endl; 
+cout<<"-------------------------------"<<endl; 
+cout<<"\t\t"<<endl; 
+cout<<"1.-Destaques"<<endl; 
+cout<<"2.-H2O"<<endl; 
+cout<<"3.-KidsCuts"<<endl; 
+cout<<"0.-Salir"<<endl; 
+cin>>opcion; 
+switch(opcion) 
+{ 
+case 1: primermenu(vec); 
+        break; 
+case 2: segundomenu (vec); 
+break; 
+case 3: tercermenu (vec); 
+break; 
+default: 
+cout<<"ERROR DE OPCION"<<endl; 
+} 
+} 
+while (opcion!=0); 
+getch(); 
+}
