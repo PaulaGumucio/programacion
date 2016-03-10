@@ -1,0 +1,42 @@
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+void mostrar (int vec[], int n);
+void cargar (int vec[], int n);
+void copiarImpares (int vecA[], int nA, int vecB[], int &nB);
+
+void main ()
+{int vec[20], n, vB[20], nB;
+ cout<<"Ingrese los elementos del vector: "<<endl;
+ cin>>n;
+ cargar (vec, n);
+ mostrar (vec, n);
+ copiarImpares (vec, n, vB, nB);
+ mostrar (vB, nB);
+ getch ();
+ }
+
+void cargar (int vec[], int n)
+{for (int i=0; i<n; i++)
+   {cout<<"vec["<<i<<"]: ";
+    cin>>vec[i];
+   }
+}
+
+void mostrar (int vec[], int n)
+ {for (int i=0; i<n; i++)
+   cout<<"vec["<<i<<"]: "<<vec[i];
+ }
+
+void copiarImpares (int vecA[], int nA, int vecB[], int &nB)
+{int i;
+ nB=0;
+ for (i=0; i<nA; i++)
+ {if (vecA[i]%2!=0)
+  {vecB[nB] = vecA[i];
+   nB++;
+  }
+ }
+}
