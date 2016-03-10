@@ -1,0 +1,19 @@
+#include <iostream>
+#include "conio.h"
+//Realizar una funcion que dado un vecotr ya cargado con n elementos enteros, muestre la frecuencia de repeticion de cada elemento, tomando en cuenta las sgtes. restricciones:
+//1. No puede usar otro vector
+//2. No puede modificar el contenido del vector
+//3. No puede mostrar mas de una vez la frecuencia de un vector
+
+using namespace std;
+
+void mostrar (int vec [], int n);
+void cargar (int vec [], int n);
+
+
+void main ()
+{int vec[20], n, vB[20], nB;
+ cout<<"Ingrese los elementos del vector: "<<endl;
+ cin>>n;
+ getch ();
+}
